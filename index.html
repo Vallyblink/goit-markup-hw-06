@@ -475,6 +475,22 @@
 
                 
             </div>
+            <div class="telegram-form">
+                <form action="" class="footer-form">
+                    <p class="telegram-title">Підпишіться на розсилку</p>
+                        <input type="email" name="email" class="footer-input" autofocus placeholder="E-mail">
+                        
+                </form>   
+                    
+                 <div class="telegram-parent">
+                    <button type="submit" class="btn-modalsubmit">Відправити</button>
+                    <svg class="input-icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#icon-letter-icon"></use>
+
+                    </svg>
+                </div>
+                        
+            </div>
         </div>       
         
     </footer>
@@ -486,6 +502,50 @@
                  <use href="./images/icons.svg#icon-Vector" ></use>
              </svg>
          </button>
+
+         <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+         
+         <form action="" class="modal-form">
+            <label for="name" class="modal-label"> Ім'я</label>
+           <div class="icon-parent">
+            <input type="name" name="name" class="modal-input" required autofocus>
+                <svg class="input-icon" width="18px" height="18px">
+                    <use href="./images/icons.svg#icon-name"></use>
+                </svg>
+           </div>
+            
+            <label for="tel" class="modal-label">Телефон</label>
+            <div class="icon-parent">
+                <input type="tel" name="tel" class="modal-input" required autofocus>
+                <svg class="input-icon" width="18px" height="18px">
+                    <use href="./images/icons.svg#icon-telef"></use>
+                </svg>
+            </div>
+            
+            <label for="email" class="modal-label">Пошта</label>
+            <div class="icon-parent">
+                <input type="email" name="email" class="modal-input" autofocus>
+                <svg class="input-icon" width="18px" height="18px">
+                    <use href="./images/icons.svg#icon-letter-icon"></use>
+                </svg>
+            </div>
+            
+            <label for="comment" class="modal-label">Коментар</label>
+            <input type="textarea" 
+            name="comment" 
+            class="modal-input comment" 
+            autofocus
+            placeholder="Ваш коментар">
+            
+            <div class="checkbox"></div>
+            <input class="" type="checkbox" name="agree" value="Погоджуюся з розсилкою та приймаю Умови договору" id="checkbox">
+            <label class="" for="checkbox">Погоджуюся з розсилкою та приймаю<span><a href="">Умови договору</a></span></label>
+            <svg class="input-icon" width="18px" height="18px">
+                <use href="./images/icons.svg#icon-check"></use>
+            </svg>
+            <button type="submit" class="btn-modalsubmit">Відправити</button>
+         </form>
+
         </div>
     </div>
     <script src="./js/modal.js"></script>
