@@ -57,6 +57,13 @@ ul{
    
 }
 
+.visuallyhidden {
+	position: absolute; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height: 1px; width: 1px; 
+	margin: -1px; padding: 0; border: 0; 
+}
    /*Header*/
 
  .site-nav {
@@ -215,7 +222,6 @@ ul{
    fill: var(--accent-color);
  }
 
-
 /* _____________________________main_______________________________________ */
 .section-main{
    background-color: rgba(47, 48, 58, 1);
@@ -232,7 +238,7 @@ ul{
     margin-left: auto;
     margin-right: auto;
    
- }
+}
 
  .main-button {
     color: var(--white-color);
@@ -252,13 +258,9 @@ ul{
     margin: 0 auto;
     width: 216px;
     height: 50px;
- }
+}
  
- 
-
                              /* Benefits */
-
-
 
  .main-title {
    color: var(--white-color);
@@ -296,11 +298,7 @@ ul{
    overflow: hidden;
    padding: 0;
    width: 1px;
-   /* clip: rect(1px, 1px, 1px, 1px);
-   -webkit-clip-path:inset (50%);
-   clip-path:inset (50%); */
-   
-   /* word-wrap: normal; */
+ 
  }
 
 .column-title {
@@ -372,12 +370,7 @@ ul{
    left: 50%;
    transform: translate(-50%,-50%);
 
-
-
  }
-
-
-   
    /* -----------------------------TEAM SECTION----------------------------------- */
   
 
@@ -401,7 +394,7 @@ ul{
 
 .namerole{
    padding-top: 30px;
-   margin-bottom: 30px;
+   padding-bottom: 30px;
 }
 
 .team.section{
@@ -425,7 +418,7 @@ ul{
       line-height: 1.18;
       margin-bottom: 16px;
       
-   }
+}
 
 .team-social-list{
    display: flex;
@@ -458,7 +451,7 @@ ul{
    
    transition: background-color 250ms var(--cub);
    
-   }
+}
 
 .social-icon {
   fill: rgba(175, 177, 184, 1);
@@ -496,23 +489,6 @@ ul{
    
 }
 
-
-/* .client-box{
-   width: 170px;
-   height: 100px;
-
-   border: 1px solid rgba(175, 177, 184, 1);
-   border-radius: 4px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-   
-   transition: border 250ms var(--cub);
-} */
-
 .client-link{
    width: 170px;
    height: 100px;
@@ -542,7 +518,6 @@ ul{
    border-color:var(--accent-color) ;
 }
 
-
 .client-link:hover .client-icon{
    fill: var(--accent-color);
 }
@@ -565,7 +540,7 @@ ul{
     text-decoration: none;
     margin-bottom: 20px;
 
-}
+   }
    .adress {
    display: block;
     color:var(--white-color);
@@ -684,7 +659,6 @@ ul{
    margin-bottom: 0;
  }
 
-
 .page-button{
  color: var(--primary-text-color);
  background: rgba(245, 244, 250, 1);
@@ -713,7 +687,6 @@ ul{
    border-radius: 4px;
 
 }
-
 
 .page-li:hover, .page-li:focus{
    /* border: 1px solid #EEEEEE; */
@@ -769,7 +742,7 @@ width: 100%;
 height: 100%;
 top: 0px;
 background-color: rgba(0, 0, 0, 0.2);
-transition: opaciti 300ms var(--cub), visibility 300ms var(--cub);
+transition:visibility 300ms var(--cub), opacity 300ms var(--cub) ;
 }
    
     
@@ -799,6 +772,7 @@ transition: opaciti 300ms var(--cub), visibility 300ms var(--cub);
    visibility:hidden;
    opacity:0;
    pointer-events:none;
+
 }   
 
 .close-modal {
@@ -847,7 +821,7 @@ transition: opaciti 300ms var(--cub), visibility 300ms var(--cub);
 .icon-parent{
    position: relative;
    margin-bottom: 10px;
-   margin-top: 4px;
+   
 
 }
 
@@ -867,31 +841,38 @@ transition: opaciti 300ms var(--cub), visibility 300ms var(--cub);
    fill:var(--accent-color)
 }
 
-
-.modal-input.comment{
-   height: 120px;
-   margin-top: 4px;
-   padding-left: 0;
-   margin-bottom: 25px;
-
-   
-   
-}
-
 .modal-label{
+display: block;
   
 font-size: 12px;
 line-height: 1.16;
 
 letter-spacing: 0.01em;
 color: rgba(117, 117, 117, 1);
+margin-bottom: 4px;
 
+}
+.modal-comment{
+   width: 100%;
+   height: 120px;
+   resize: none;
+   border: 1px solid rgba(33, 33, 33, 0.2);
+   border-radius: 4px;
+   outline: none;
+ 
+   transition: border-color 250ms var(--cub);
+   
+   padding: 12px 16px;
+
+   margin-bottom: 20px;
+}
+.modal-comment:focus,
+.modal-comment:hover{
+   border-color: var(--accent-color);
 
 }
 
-
-
-.modal-input.comment::placeholder{
+.modal-comment::placeholder{
    font-family: 'Roboto';
    font-weight: 400;
    font-size: 12px;
@@ -899,10 +880,17 @@ color: rgba(117, 117, 117, 1);
    letter-spacing: 0.01em;
    color: rgba(117, 117, 117, 0.5);
 
-   
+   transition: color 250ms var(--cub);
+
+}
+
+.modal-comment:hover::placeholder{
+   color: var(--accent-color);
 }
 
 .btn-modalsubmit{
+   margin-left: auto;
+   margin-right: auto;
    height: 50px;
    width: 200px;
 
@@ -928,17 +916,84 @@ color: rgba(117, 117, 117, 1);
    
 }
 
-.modal-form input[checkbox]{
-   width: 16px;
-   height: 15px;
+.checkbox{
+   position: relative;
+   width: 406px;
+   height: 17px;
   
+}
+
+.modal-checkbox.visuallyhidden{
+   cursor: pointer;
+   opacity: 1;
    
 }
 
+
+.modal-text{
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.71;
+   letter-spacing: 0.03em;
+   color:rgba(117, 117, 117, 1);
+ 
+   
+}
+
+.modal-text::before{
+   content: "";
+   width: 16px;
+   height: 15px;
+   border-radius: 4px;
+   border-color:rgba(33, 33, 33, 1);
+   margin-right: 7px;
+   border: 2px solid;
+   display: inline-flex;
+}
+ 
+.modal-link{
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.71;
+   letter-spacing: 0.03em;
+   text-decoration: none;
+   color: rgba(33, 150, 243, 1);
+}
+
+.check-icon{
+   position: absolute;
+   top: 0;
+   left: 0;
+   fill: transparent;
+   width: 15px;
+   height: 14px;
+
+}
+
+.modal-checkbox.visuallyhidden:checked +.check-icon{
+   fill: var(--white-color);
+}
+.modal-checkbox.visuallyhidden:checked +.modal-text::before{
+   background-color: var(--accent-color);
+}
+
+/* .modal-checkbox.visuallyhidden:checked .check-icon:hover{
+   opacity: 1;
+} */
+
+
+
+/* ___________________FOOTER FORM_______________________ */
 .telegram-form{
    display: flex;
    flex-direction: row;
-   align-items: center;
+   align-items: flex-end;
+   justify-content: baseline;
+   gap: 12px;
 }
 
 .telegram-title{
@@ -950,8 +1005,47 @@ color: rgba(117, 117, 117, 1);
    letter-spacing: 0.03em;
    text-transform: uppercase;
    color: var(--white-color);
+
+   margin-bottom: 20px;
 }
 
+.footer-input{
+   height: 50px;
+   width: 358px;
+   background-color: transparent;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+   border-radius: 4px;
+ 
+
+}
+.footer-input::placeholder{
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 20px;
+
+   display: flex;
+   align-items: center;
+   letter-spacing: 0.03em;
+
+   color: rgba(255, 255, 255, 0.6);
+
+   
+}
+
+.telegram-parent .btn-modalsubmit::after{
+   content: "";
+   display: flex;
+   justify-content: center;
+   background-image:url(../iconsend.svg);
+   background-color: var(--accent-color);
+   width: 24px;
+   height: 24px;
+   margin-left: 10px;
+}
+   
 
 
 
