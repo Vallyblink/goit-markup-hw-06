@@ -605,9 +605,9 @@ ul{
 .telegram-form{
       display: flex;
       flex-direction: row;
-      align-items: flex-end;
       justify-content: baseline;
       gap: 12px;
+      padding-top: 20px;
 }
    
    .telegram-title{
@@ -658,6 +658,10 @@ ul{
       width: 24px;
       height: 24px;
       margin-left: 10px;
+   }
+
+   .telegram-parent .btn-modalsubmit{
+      margin-top: 0;
    }
       
 
