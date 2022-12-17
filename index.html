@@ -20,7 +20,7 @@
     <header class="header">
         <div class="container header-nav">
             <nav class="main-nav">   
-                <a class="logo" href="WebStudio"> <span>Web</span>Studio</a>
+                <a class="logo" href="WebStudio"> <span class="spanlogo">Web</span>Studio</a>
                 <ul class="site-nav">
                     
                     <li class="header-li"><a class="navigation current" href="./index.html">Студія</a> </li>
@@ -422,10 +422,10 @@
         </section>
     </main>
 
-    <footer class="footer lop">
+    <footer class="footer">
         <div class="footer-container container">
             
-            <div>
+            <div class="footer-nav">
                 <a class="footer-logo" href="WebStudio"> <span>Web</span>Studio</a>
                     <address>
                     <ul class="footer-list">
@@ -476,22 +476,21 @@
                 
             </div>
             
-            <form action="" class="telegram-form">
-                <div class="footer-form">
-                    <p class="telegram-title">Підпишіться на розсилку</p>
-                        <input type="email" name="email" class="footer-input" autofocus placeholder="E-mail">
-                </div>     
-              
+            <div class="footer-form">
+                <p class="telegram-title">Підпишіться на розсилку</p>
+                <form class="telegram-form">
+                    <input type="email" name="email" class="footer-input" placeholder="E-mail">
                     
-                <div class="telegram-parent">
-                    <button type="submit" class="btn-modalsubmit">Відправити</button>
-                    <!-- <svg class="input-icon" width="18px" height="18px">
-                        <use href="./images/icons.svg#icon-letter-icon"></use>
+                    <div class="telegram-parent">
+                        <button type="submit" class="btn-modalsubmit">Відправити</button>
+                        <!-- <svg class="input-icon" width="18px" height="18px">
+                            <use href="./images/icons.svg#icon-letter-icon"></use>
 
-                    </svg> -->
-                </div>
-                        
-            </form> 
+                        </svg> -->
+                    </div>
+                            
+                </form> 
+            </div>   
         </div>       
         
     </footer>
@@ -506,10 +505,10 @@
 
          <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
          
-         <form action="" class="modal-form">
-            <label for="name" class="modal-label"> Ім'я</label>
+         <form class="modal-form">
+            <label for="username" class="modal-label"> Ім'я</label>
            <div class="icon-parent">
-            <input type="name" name="name" class="modal-input" required autofocus id="name">
+            <input type="name" name="username" class="modal-input"  id="name">
                 <svg class="input-icon" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-name"></use>
                 </svg>
@@ -517,7 +516,7 @@
             
             <label for="tel" class="modal-label">Телефон</label>
             <div class="icon-parent">
-                <input type="tel" name="tel" class="modal-input" required autofocus id="tel"> 
+                <input type="tel" name="tel" class="modal-input"  id="tel"> 
                 <svg class="input-icon" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-telef"></use>
                 </svg>
@@ -525,7 +524,7 @@
             
             <label for="email" class="modal-label">Пошта</label>
             <div class="icon-parent">
-                <input type="email" name="email" class="modal-input" autofocus id="email">
+                <input type="email" name="email" class="modal-input"  id="email">
                 <svg class="input-icon" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-letter-icon"></use>
                 </svg>
@@ -538,14 +537,14 @@
     
             
             <label class="checkbox" for="checkbox">
-                <input class="modal-checkbox visuallyhidden" width="406px" 
-                type="checkbox" name="agree" 
-                value="checkbox" id="checkbox"> 
-                <span class="modal-text">Погоджуюся з розсилкою та приймаю </span>
-                <a class="modal-link" href="">Умови договору</a>
-                <svg class="check-icon" width="16px" height="15px">
-                    <use href="./images/icons.svg#icon-check"></use>
-                </svg>
+                <input class="modal-checkbox" type="checkbox" name="agree" id="checkbox" value="Погоджуюся з розсилкою та приймаю Умови договору"> 
+                <span class="empty"> 
+                    <svg class="check-icon" width="16px" height="15px">                   
+                    <use href="./images/icons.svg#icon-check"></use>            
+                    </svg>
+                </span>
+                <span class="modal-text" >Погоджуюся з розсилкою та приймаю <a class="modal-link" href="">Умови договору</a></span>
+               
             </label>
             
             <button type="submit" class="btn-modalsubmit">Відправити</button>
